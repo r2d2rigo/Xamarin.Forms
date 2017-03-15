@@ -53,9 +53,16 @@ namespace Xamarin.Forms.Controls.Issues
 
 			if(menuItem == nameof(DatePicker) || menuItem == nameof(TimePicker))
 			{
-				// These controls show a pop-up which we have to cancel out of before we can continue
-				RunningApp.WaitForElement(q => q.Marked("Cancel"));
-				RunningApp.Tap(q => q.Marked("Cancel"));
+				// These controls show a pop-up which we have to cancel/done out of before we can continue
+#if __ANDROID__
+				var cancelButtonText = "Cancel";
+#elif __IOS__
+				var cancelButtonText = "Done";
+#else
+				var cancelButtonText = "Cancel";
+#endif
+				RunningApp.WaitForElement(q => q.Marked(cancelButtonText));
+				RunningApp.Tap(q => q.Marked(cancelButtonText));
 			}
 
 			// Since InputTransparent is set to false, the start label should not have changed
@@ -72,7 +79,7 @@ namespace Xamarin.Forms.Controls.Issues
 		}
 #endif
 
-		ContentPage CreateTestPage(View view)
+				ContentPage CreateTestPage(View view)
 		{
 			var layout = new Grid();
 			layout.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
