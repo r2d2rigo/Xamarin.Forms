@@ -1,13 +1,16 @@
 ﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms
 {
 	public sealed class PinchGestureRecognizer : GestureRecognizer, IPinchGestureController
 	{
-		bool IPinchGestureController.IsPinching { get; set; }
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public bool IsPinching { get; set; }
 
-		void IPinchGestureController.SendPinch(Element sender, double delta, Point currentScalePoint)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendPinch(Element sender, double delta, Point currentScalePoint)
 		{
 			EventHandler<PinchGestureUpdatedEventArgs> handler = PinchUpdated;
 			if (handler != null)
@@ -17,7 +20,8 @@ namespace Xamarin.Forms
 			((IPinchGestureController)this).IsPinching = true;
 		}
 
-		void IPinchGestureController.SendPinchCanceled(Element sender)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendPinchCanceled(Element sender)
 		{
 			EventHandler<PinchGestureUpdatedEventArgs> handler = PinchUpdated;
 			if (handler != null)
@@ -27,7 +31,8 @@ namespace Xamarin.Forms
 			((IPinchGestureController)this).IsPinching = false;
 		}
 
-		void IPinchGestureController.SendPinchEnded(Element sender)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendPinchEnded(Element sender)
 		{
 			EventHandler<PinchGestureUpdatedEventArgs> handler = PinchUpdated;
 			if (handler != null)
@@ -37,7 +42,8 @@ namespace Xamarin.Forms
 			((IPinchGestureController)this).IsPinching = false;
 		}
 
-		void IPinchGestureController.SendPinchStarted(Element sender, Point initialScalePoint)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendPinchStarted(Element sender, Point initialScalePoint)
 		{
 			EventHandler<PinchGestureUpdatedEventArgs> handler = PinchUpdated;
 			if (handler != null)

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -90,7 +91,8 @@ namespace Xamarin.Forms
 
 		public IList<ToolbarItem> ToolbarItems { get; internal set; }
 
-		Rectangle IPageController.ContainerArea
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public Rectangle ContainerArea
 		{
 			get { return _containerArea; }
 			set
@@ -103,13 +105,15 @@ namespace Xamarin.Forms
 			}
 		}
 
-		bool IPageController.IgnoresContainerArea
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public bool IgnoresContainerArea
 		{
 			get { return (bool)GetValue(IgnoresContainerAreaProperty); }
 			set { SetValue(IgnoresContainerAreaProperty, value); }
 		}
 
-		ObservableCollection<Element> IPageController.InternalChildren { get; } = new ObservableCollection<Element>();
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public ObservableCollection<Element> InternalChildren { get; } = new ObservableCollection<Element>();
 
 		internal override ReadOnlyCollection<Element> LogicalChildrenInternal => 
 			_logicalChildren ?? (_logicalChildren = new ReadOnlyCollection<Element>(PageController.InternalChildren));
@@ -292,7 +296,8 @@ namespace Xamarin.Forms
 			}
 		}
 
-		void IPageController.SendAppearing()
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendAppearing()
 		{
 			if (_hasAppeared)
 				return;
@@ -311,7 +316,8 @@ namespace Xamarin.Forms
 			((IPageController)pageContainer?.CurrentPage)?.SendAppearing();
 		}
 
-		void IPageController.SendDisappearing()
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendDisappearing()
 		{
 			if (!_hasAppeared)
 				return;

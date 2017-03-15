@@ -26,7 +26,7 @@ namespace Xamarin.Forms
 
 		T _current;
 
-		ObservableCollection<Element> InternalChildren => ((IPageController)this).InternalChildren;
+		new ObservableCollection<Element> InternalChildren => ((IPageController)this).InternalChildren;
 
 		protected MultiPage()
 		{

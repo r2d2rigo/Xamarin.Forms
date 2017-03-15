@@ -214,15 +214,9 @@ namespace Xamarin.Forms
 
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		public ListViewCachingStrategy CachingStrategy { get; private set; }
-		ListViewCachingStrategy IListViewController.CachingStrategy
-		{
-			get
-			{
-				return CachingStrategy;
-			}
-		}
 
-		bool RefreshAllowed
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public bool RefreshAllowed
 		{
 			set
 			{
@@ -235,36 +229,36 @@ namespace Xamarin.Forms
 			get { return _refreshAllowed; }
 		}
 
-		Element IListViewController.FooterElement
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public Element FooterElement
 		{
 			get { return _footerElement; }
 		}
 
-		Element IListViewController.HeaderElement
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public Element HeaderElement
 		{
 			get { return _headerElement; }
 		}
 
-		bool IListViewController.RefreshAllowed
-		{
-			get { return RefreshAllowed; }
-		}
-
-		void IListViewController.SendCellAppearing(Cell cell)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendCellAppearing(Cell cell)
 		{
 			EventHandler<ItemVisibilityEventArgs> handler = ItemAppearing;
 			if (handler != null)
 				handler(this, new ItemVisibilityEventArgs(cell.BindingContext));
 		}
 
-		void IListViewController.SendCellDisappearing(Cell cell)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendCellDisappearing(Cell cell)
 		{
 			EventHandler<ItemVisibilityEventArgs> handler = ItemDisappearing;
 			if (handler != null)
 				handler(this, new ItemVisibilityEventArgs(cell.BindingContext));
 		}
 
-		void IListViewController.SendRefreshing()
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void SendRefreshing()
 		{
 			BeginRefresh();
 		}

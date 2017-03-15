@@ -176,10 +176,10 @@ namespace Xamarin.Forms.Platform.MacOS
 				{
 					var templatedList = TemplatedItemsView.TemplatedItems.GetGroup(sectionIndex);
 					cell = (Cell)((INativeElementView)nativeCell).Element;
-					ICellController controller = cell;
-					controller.SendDisappearing();
+
+					cell.SendDisappearing();
 					templatedList.UpdateContent(cell, itemIndexInSection);
-					controller.SendAppearing();
+					cell.SendAppearing();
 				}
 			}
 			else

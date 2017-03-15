@@ -800,10 +800,10 @@ namespace Xamarin.Forms.Platform.iOS
 					{
 						var templatedList = TemplatedItemsView.TemplatedItems.GetGroup(indexPath.Section);
 						var cell = (Cell)((INativeElementView)nativeCell).Element;
-						ICellController controller = cell;
-						controller.SendDisappearing();
+
+						cell.SendDisappearing();
 						templatedList.UpdateContent(cell, indexPath.Row);
-						controller.SendAppearing();
+						cell.SendAppearing();
 					}
 				}
 				else

@@ -150,6 +150,27 @@ namespace FormsGallery
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CanChangeIsPresented">
+      <MemberSignature Language="C#" Value="public bool CanChangeIsPresented { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeIsPresented" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Detail">
       <MemberSignature Language="C#" Value="public Xamarin.Forms.Page Detail { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Xamarin.Forms.Page Detail" />
@@ -168,6 +189,27 @@ namespace FormsGallery
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the detail page that is used to display details about items on the master page.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailBounds">
+      <MemberSignature Language="C#" Value="public Xamarin.Forms.Rectangle DetailBounds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Xamarin.Forms.Rectangle DetailBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Xamarin.Forms.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -371,6 +413,27 @@ namespace FormsGallery
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MasterBounds">
+      <MemberSignature Language="C#" Value="public Xamarin.Forms.Rectangle MasterBounds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Xamarin.Forms.Rectangle MasterBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Xamarin.Forms.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="On&lt;T&gt;">
       <MemberSignature Language="C#" Value="public Xamarin.Forms.IPlatformElementConfiguration&lt;T,Xamarin.Forms.MasterDetailPage&gt; On&lt;T&gt; () where T : Xamarin.Forms.IConfigPlatform;" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Xamarin.Forms.IPlatformElementConfiguration`2&lt;!!T, class Xamarin.Forms.MasterDetailPage&gt; On&lt;(class Xamarin.Forms.IConfigPlatform) T&gt;() cil managed" />
@@ -474,6 +537,27 @@ namespace FormsGallery
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ShouldShowSplitMode">
+      <MemberSignature Language="C#" Value="public bool ShouldShowSplitMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldShowSplitMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ShouldShowToolbarButton">
       <MemberSignature Language="C#" Value="public virtual bool ShouldShowToolbarButton ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldShowToolbarButton() cil managed" />
@@ -491,70 +575,6 @@ namespace FormsGallery
       <Docs>
         <summary>Returns a value that tells whether the list view should display a toolbar button.</summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Xamarin.Forms.IMasterDetailPageController.CanChangeIsPresented">
-      <MemberSignature Language="C#" Value="bool Xamarin.Forms.IMasterDetailPageController.CanChangeIsPresented { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Xamarin.Forms.IMasterDetailPageController.CanChangeIsPresented" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>Internal.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Xamarin.Forms.IMasterDetailPageController.DetailBounds">
-      <MemberSignature Language="C#" Value="Xamarin.Forms.Rectangle Xamarin.Forms.IMasterDetailPageController.DetailBounds { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Xamarin.Forms.Rectangle Xamarin.Forms.IMasterDetailPageController.DetailBounds" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Xamarin.Forms.Rectangle</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>Internal.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Xamarin.Forms.IMasterDetailPageController.MasterBounds">
-      <MemberSignature Language="C#" Value="Xamarin.Forms.Rectangle Xamarin.Forms.IMasterDetailPageController.MasterBounds { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Xamarin.Forms.Rectangle Xamarin.Forms.IMasterDetailPageController.MasterBounds" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Xamarin.Forms.Rectangle</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>Internal.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Xamarin.Forms.IMasterDetailPageController.ShouldShowSplitMode">
-      <MemberSignature Language="C#" Value="bool Xamarin.Forms.IMasterDetailPageController.ShouldShowSplitMode { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Xamarin.Forms.IMasterDetailPageController.ShouldShowSplitMode" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>Internal.</summary>
-        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

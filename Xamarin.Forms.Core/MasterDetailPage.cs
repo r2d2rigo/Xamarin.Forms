@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform;
 
@@ -93,9 +94,11 @@ namespace Xamarin.Forms
 			set { SetValue(MasterBehaviorProperty, value); }
 		}
 
-		bool IMasterDetailPageController.CanChangeIsPresented { get; set; } = true;
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public bool CanChangeIsPresented { get; set; } = true;
 
-		Rectangle IMasterDetailPageController.DetailBounds
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public Rectangle DetailBounds
 		{
 			get { return _detailBounds; }
 			set
@@ -107,7 +110,8 @@ namespace Xamarin.Forms
 			}
 		}
 
-		Rectangle IMasterDetailPageController.MasterBounds
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public Rectangle MasterBounds
 		{
 			get { return _masterBounds; }
 			set
@@ -119,7 +123,8 @@ namespace Xamarin.Forms
 			}
 		}
 
-		bool IMasterDetailPageController.ShouldShowSplitMode
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public bool ShouldShowSplitMode
 		{
 			get
 			{
