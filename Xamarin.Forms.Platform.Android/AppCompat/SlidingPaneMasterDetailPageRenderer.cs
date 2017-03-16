@@ -26,7 +26,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 
         IMasterDetailPageController MasterDetailPageController => Element as IMasterDetailPageController;
 
-        bool Presented
+        internal bool Presented
         {
             get { return _presented; }
             set
@@ -122,10 +122,6 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
                         _detailLayout.SetFragmentManager(_fragmentManager);
                         _masterLayout.SetFragmentManager(_fragmentManager);
                     }
-
-                    var activity = Context as FormsAppCompatActivity;
-                    activity.SupportActionBar?.SetDisplayShowHomeEnabled(true);
-                    activity.SupportActionBar?.SetHomeButtonEnabled(true);
 
                     AddView(_masterLayout);
                     AddView(_detailLayout);

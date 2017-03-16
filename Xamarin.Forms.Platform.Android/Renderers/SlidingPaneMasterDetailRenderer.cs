@@ -84,8 +84,8 @@ namespace Xamarin.Forms.Platform.Android
 
 			_masterLayout = new MasterDetailContainer(_page, true, Context)
 			{
-				LayoutParameters = new LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
-			};
+                LayoutParameters = new LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent)
+            };
 
 			AddView(_masterLayout);
 
