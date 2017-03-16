@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Support.V4.App;
+using Android.Graphics.Drawables.Shapes;
+using Android.Graphics.Drawables;
+using Android.Graphics;
+using AView = Android.Views.View;
 
 namespace Xamarin.Forms.Platform.Android.AppCompat
 {
@@ -23,6 +27,9 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
         }
 
         MasterDetailPage Element { get; set; }
+
+        public AView MasterView { get { return _masterLayout; } }
+        public AView DetailView { get { return _detailLayout; } }
 
         IMasterDetailPageController MasterDetailPageController => Element as IMasterDetailPageController;
 
@@ -48,19 +55,19 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
         IPageController DetailPageController => Element.Detail as IPageController;
         IPageController PageController => Element as IPageController;
 
-        public void OnPanelClosed(global::Android.Views.View panel)
+        public virtual void OnPanelClosed(global::Android.Views.View panel)
         {
             _presented = IsOpen;
             UpdateIsPresented();
         }
 
-        public void OnPanelOpened(global::Android.Views.View panel)
+        public virtual void OnPanelOpened(global::Android.Views.View panel)
         {
             _presented = IsOpen;
             UpdateIsPresented();
         }
 
-        public void OnPanelSlide(global::Android.Views.View panel, float slideOffset)
+        public virtual void OnPanelSlide(global::Android.Views.View panel, float slideOffset)
         {
         }
 
@@ -323,7 +330,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
         {
             Color backgroundColor = view.BackgroundColor;
             // if (backgroundColor.IsDefault)
-                SetBackgroundColor(backgroundColor.ToAndroid());
+            SetBackgroundColor(backgroundColor.ToAndroid());
         }
 
         void UpdateBackgroundImage(Page view)
