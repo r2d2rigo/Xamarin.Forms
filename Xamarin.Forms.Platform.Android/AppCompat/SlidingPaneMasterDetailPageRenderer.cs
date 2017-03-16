@@ -322,7 +322,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
         void UpdateBackgroundColor(Page view)
         {
             Color backgroundColor = view.BackgroundColor;
-            if (backgroundColor.IsDefault)
+            // if (backgroundColor.IsDefault)
                 SetBackgroundColor(backgroundColor.ToAndroid());
         }
 
